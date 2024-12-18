@@ -51,6 +51,7 @@ The QR Code Generation API is a powerful and flexible solution for generating QR
    ```
 
 4. Run the application
-   ```npm run dev
+   ```bash
+   npm run dev
 
    ```

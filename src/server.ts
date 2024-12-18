@@ -1,6 +1,9 @@
 import app from "./app";
+import { setupSwagger } from "./swagger";
 
 const port = process.env.PORT || 3000;
+
+setupSwagger(app);
 
 // Start the server
 app.listen(port, () => {

@@ -11,7 +11,25 @@ app.get("/", (req, res) => {
   res.send("WELCOME TO QSRCODE GEN");
 });
 
-// Endpoint to generate QR Code
+/** @swagger
+ *  components:
+ *  schemas:
+ *   QRCodeRequest:
+ *      type: object
+ *      required:
+ *          - text
+ *      properties:
+ *          text:
+ *              type: string
+ *              description: Text to encode in the QR Code
+ *   QRCodeResponse:
+ *      type: object
+ *      properties:
+ *          qrCodeImageUrl:
+ *              type: string
+ *              description: Base64 encoded QR Code image
+ */
+
 app.post("/generate", async (req, res) => {
   const { text } = req.body;
 
